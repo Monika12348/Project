@@ -1,0 +1,287 @@
+
+/* Basic page settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Keep sections visible below sticky navigation */
+#home,
+#about,
+#menu {
+    scroll-margin-top: 80px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    line-height: 1.6;
+    background-color: #fffaf5;
+}
+
+/* Navigation bar */
+header {
+    background-color: #96704F;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 12px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo and icon */
+.icon,
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon img,
+.brand img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fffaf5;
+    margin: 0;
+}
+
+/* Navigation links */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+}
+
+.navbar ul a {
+    color: #fffaf5;
+    text-decoration: none;
+}
+
+.navbar ul a:hover {
+    color: #e8d5c0;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    padding: 50px 20px;
+
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) ,url("images/coffee_bg.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 520px;
+    margin-left: 5%;
+}
+
+.hero h1 {
+    color: white;
+}
+
+.hero p {
+    color: white;
+}
+
+.button {
+    display: inline-block;
+    background-color: #7b4935;
+    color: white;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #593323;
+}
+
+/* Common section styling */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    color: #7b4935;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+/* About Section */
+.about {
+    background-color: #fffaf5;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto 15px;
+    font-size: 16px;
+}
+
+/* Menu Section */
+.menu {
+    background-color: #96704F;
+}
+
+.menu h2 {
+    color: #fffaf5;
+}
+
+.menu-intro {
+    color: #fffaf5;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.menu-items {
+    max-width: 950px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Individual menu cards */
+.menu-card {
+    flex: 1;
+    max-width: 300px;
+    min-width: 0;
+    padding: 12px;
+    background-color: #DCC3A8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Clickable image area */
+.menu-card summary {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    list-style: none;
+}
+
+.menu-card summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Menu images */
+.menu-card summary img {
+    width: 100%;
+    max-width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+}
+
+/* Image text */
+.image-hint {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    padding: 7px 0;
+    color: #633D2E;
+}
+
+/* Details after clicking image */
+.menu-details {
+    padding: 10px 3px;
+}
+
+.menu-details h3 {
+    color: #633D2E;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.menu-details p {
+    color: #493326;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #633d2e;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .hero {
+        min-height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .hero-content {
+        margin-left: 0;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .menu-card summary img {
+        height: 160px;
+    }
+}
