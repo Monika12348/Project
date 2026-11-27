@@ -1,0 +1,6 @@
+{
+  "extends": "react-app",
+  "rules": {
+    "no-unused-vars": "warn"  // Changes to warning only, not error
+  }
+}
